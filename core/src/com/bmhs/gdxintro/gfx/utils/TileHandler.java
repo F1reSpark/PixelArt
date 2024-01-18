@@ -12,7 +12,7 @@ public class TileHandler {
 
     private int spriteOnSheetHeight, spriteOnSheetWidth;
 
-    private String primaryColorSheetPath = "primaryColorSheet.png";
+    private String primaryColorSheetPath = "primary color spritesheet.xcf";
 
     private Array<WorldTile> worldTileArray;
 
@@ -39,6 +39,18 @@ public class TileHandler {
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*3, spriteOnSheetWidth, spriteOnSheetHeight);
         WorldTile orangeWorldTile = new WorldTile(tempRegion, 3, "orange");
         worldTileArray.add(orangeWorldTile);
+
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*4, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile greenWorldTile = new WorldTile(tempRegion, 4, "green");
+        worldTileArray.add(greenWorldTile);
+
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*4, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile greenWorldTile = new WorldTile(tempRegion, 4, "green");
+        worldTileArray.add(greenWorldTile);
+
+        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*4, spriteOnSheetWidth, spriteOnSheetHeight);
+        WorldTile greenWorldTile = new WorldTile(tempRegion, 4, "green");
+        worldTileArray.add(greenWorldTile);
 
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*0, spriteOnSheetHeight*4, spriteOnSheetWidth, spriteOnSheetHeight);
         WorldTile greenWorldTile = new WorldTile(tempRegion, 4, "green");
