@@ -21,10 +21,19 @@ public class AppHandler extends ApplicationAdapter {
 	int x, y;
 
 
-	int[][] worldIntArray = {{1,2,3,4,5,6,7},
-							 {1,2,3,4,5,6,7},
-							 {1,2,3,4,5,6,7},
-							 {1,2,3,4,5,6,7}
+	int[][] worldIntArray = {
+			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1,1,1,1,0,5,0,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1,1,1,1,0,4,0,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1,1,1,0,5,5,0,1,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,1,1,1,1,1,0,4,4,5,0,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,0,0,1,1,0,5,5,5,4,0,1,1,1,1,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,0,4,0,1,0,9,9,9,9,0,1,1,0,0,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,0,4,0,0,5,5,5,5,5,9,0,0,4,0,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,1,1,0,9,4,5,5,9,9,9,5,5,9,5,4,0,1,1,1,1,1,1,1,1},
+			{1,1,1,1,1,0,0,0,0,4,9,9,3,1,3,9,9,5,5,0,0,0,1,1,1,1,1,1,1},
+			{1,1,1,1,0,0,0,0,1,0,9,2,2,1,2,2,9,5,4,0,0,9,0,0,1,1,1,1,1},
+
 										};
 	@Override
 	public void create () {
@@ -45,7 +54,7 @@ public class AppHandler extends ApplicationAdapter {
 
 		for(int r = 0; r < worldIntArray.length; r++) {
 			for(int c = 0; c < worldIntArray[r].length; c++) {
-				batch.draw(TileHandler.getTileHandler().getWorldTileArray().get(worldIntArray[r][c]).getTexture(), c*64, r*64);
+				batch.draw(TileHandler.getTileHandler().getWorldTileArray().get(worldIntArray[r][c]).getTexture(), c*Tile.ON_SCREEN_DEFAULT_WIDTH, Gdx.graphics.getHeight() - Tile.ON_SCREEN_DEFAULT_HEIGHT - (r * Tile.ON_SCREEN_DEFAULT_HEIGHT));
 				if(x > 4) {
 					x = 0;
 				}
