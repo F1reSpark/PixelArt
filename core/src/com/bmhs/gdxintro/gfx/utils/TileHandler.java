@@ -56,17 +56,13 @@ public class TileHandler {
         WorldTile browndarkWorldTile = new WorldTile(tempRegion, 7, "brown2");
         worldTileArray.add(browndarkWorldTile);
 
-        tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*9, spriteOnSheetHeight*1, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile greydarkWorldTile = new WorldTile(tempRegion, 8, "grey1");
-        worldTileArray.add(greydarkWorldTile);
-
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*4, spriteOnSheetHeight*1, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile greylightWorldTile = new WorldTile(tempRegion, 9, "grey2");
+        WorldTile greylightWorldTile = new WorldTile(tempRegion, 8, "grey2");
         worldTileArray.add(greylightWorldTile);
 
         tempRegion = new TextureRegion(tempTexture, spriteOnSheetWidth*6, spriteOnSheetHeight*1, spriteOnSheetWidth, spriteOnSheetHeight);
-        WorldTile greymedWorldTile = new WorldTile(tempRegion, 10, "grey3");
-        worldTileArray.add(greymedWorldTile);
+        WorldTile greydarkWorldTile = new WorldTile(tempRegion, 9, "grey3");
+        worldTileArray.add(greydarkWorldTile);
     }
 
     public Array<WorldTile> getWorldTileArray() {
